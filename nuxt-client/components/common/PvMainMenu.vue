@@ -1,7 +1,7 @@
 <template>
 	<nav class="main-nav font2">
 		<ul class="menu main-menu menu-arrow text-capitalize">
-			<li v-for="item in menuItems" :key="item.id">
+			<li v-for="item in displayMenuItems" :key="item.id">
                 <!-- Scrolling Link (Anchor) -->
                 <!-- Scrolling Link (Anchor) -->
                 <template v-if="item.type === 'scroll'">
@@ -47,6 +47,19 @@ import { mapState } from 'vuex';
 export default {
 	computed: {
         ...mapState(['menuItems']),
+        displayMenuItems() {
+            if (this.menuItems && this.menuItems.length > 0) {
+                return this.menuItems;
+            }
+            // Fallback Menu when Strapi is down
+            return [
+                { id: 1, label: 'Trang chủ', url: '/', type: 'link' },
+                { id: 2, label: 'Giới thiệu', url: '#intro-section', type: 'scroll' },
+                { id: 3, label: 'Thành tựu', url: '/thanh-tuu', type: 'link' },
+                { id: 4, label: 'Tuyển thành viên', url: '/tuyen-thanh-vien', type: 'link' },
+                { id: 5, label: 'Liên hệ', url: '#footer', type: 'scroll' }
+            ];
+        },
 		isPageItemActived: function () {
 			return (url) => {
                 if (url === '/') return this.$route.path === '/';

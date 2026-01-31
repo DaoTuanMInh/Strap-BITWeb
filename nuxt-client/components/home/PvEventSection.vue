@@ -60,7 +60,7 @@ export default {
             if (this.homeEventSection && this.homeEventSection.title) {
                 return this.homeEventSection.title;
             }
-            return 'Các sự kiện & hoạt động'; // Default fallback until populated
+            return ''; // Default fallback until populated
         }
     },
     methods: {
@@ -80,4 +80,3 @@ export default {
     }
 };
 </script>
-

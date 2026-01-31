@@ -97,9 +97,8 @@ export default {
 			return this.homeClassrooms ? this.homeClassrooms.content : [];
 		},
 		sectionTitle() {
-			return this.homeClassrooms ? this.homeClassrooms.title : 'Các Lớp Học';
+			return this.homeClassrooms ? this.homeClassrooms.title : '';
 		}
 	}
 };
 </script>
-

@@ -65,7 +65,7 @@
 /* Visual Gallery (Two Rectangles) */
 .visual-gallery {
     width: 100%;
-    max-width: 550px;
+    max-width: 520px;
     height: 500px;
     position: relative;
 }
@@ -81,7 +81,7 @@
     width: 65%;
     height: 60%;
     top: -20px;
-    left: -50px;
+    left: 0px;
     z-index: 2;
 }
 
@@ -100,7 +100,9 @@
 }
 
 .object-cover {
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #fff;
+    /* White background for empty space */
 }
 
 /* Floating Badges */
@@ -205,4 +207,20 @@
     font-weight: normal !important;
     text-transform: none !important;
     font-family: 'Roboto', 'Arial', sans-serif !important;
+}
+@media (max-width: 767px) {
+    .visual-gallery {
+        height: 350px;
+        max-width: 100%;
+    }
+    .item-1 {
+        width: 80%;
+        left: 0;
+        top: 0;
+    }
+    .item-2 {
+        width: 80%;
+        right: 0;
+        bottom: 0;
+    }
 }

@@ -82,9 +82,8 @@ export default {
 			return (this.homeMembers && this.homeMembers.content) || [];
 		},
 		sectionTitle() {
-			return (this.homeMembers && this.homeMembers.title) || 'Ban Chủ Nhiệm & Thành Viên';
+			return (this.homeMembers && this.homeMembers.title) || '';
 		}
 	}
 }
 </script>
-

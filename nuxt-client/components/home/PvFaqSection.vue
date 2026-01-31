@@ -56,7 +56,7 @@ export default {
             }));
         },
         sectionTitle() {
-            return (this.homeFaq && this.homeFaq.title) || 'Các câu hỏi thường gặp';
+            return (this.homeFaq && this.homeFaq.title) || '';
         },
         displayFaqs() {
             if (this.isExpanded) {
@@ -82,5 +82,3 @@ export default {
     }
 }
 </script>
-
-
