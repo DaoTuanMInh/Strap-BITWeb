@@ -1,0 +1,84 @@
+/* PvMemberRegisterModal.vue */
+.member-registry-popup {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    /* Wider to accommodate split layout */
+    margin: auto;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#newsletter-popup-form {
+    background-color: #fff !important;
+}
+
+.promo-col {
+    background: linear-gradient(135deg, #0088cc 0%, #005f8f 100%);
+    position: relative;
+}
+
+/* Diagonal divider effect or decoration */
+.promo-col::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+    pointer-events: none;
+}
+
+.form-title {
+    color: #0088cc;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.2);
+    background: #fff !important;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #0088cc, #005f8f);
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #005f8f, #0088cc);
+}
+
+.mfp-close {
+    color: #333 !important;
+}
+
+.mfp-close:hover {
+    opacity: 1;
+    color: #000 !important;
+}
+
+@media (max-width: 768px) {
+    .member-registry-popup {
+        max-width: 90%;
+    }
+
+    .promo-col {
+        display: none !important;
+        /* Hide promo on mobile to verify form focus */
+    }
+
+    .col-md-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .mfp-close {
+        color: #333 !important;
+    }
+}

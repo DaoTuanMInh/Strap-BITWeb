@@ -1,0 +1,87 @@
+{
+    "kind": "singleType",
+    "collectionName": "member_register_form",
+    "info": {
+        "name": "Member Register Form",
+        "description": "Text content for member registration form (NOT for storing submitted data)"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "promo_title_1": {
+            "type": "string",
+            "default": "CLB Công Nghệ Thông Tin"
+        },
+        "promo_title_2": {
+            "type": "string",
+            "default": "BIT CLUB"
+        },
+        "promo_subtitle": {
+            "type": "string",
+            "default": "Tuyển Thành Viên"
+        },
+        "promo_tagline": {
+            "type": "string",
+            "default": "Đam mê - Sáng tạo - Kết nối"
+        },
+        "promo_badge": {
+            "type": "string",
+            "default": "Code Your Future"
+        },
+        "form_title": {
+            "type": "string",
+            "default": "Đăng Ký Thành Viên"
+        },
+        "fullname_label": {
+            "type": "string",
+            "default": "Họ và tên"
+        },
+        "fullname_placeholder": {
+            "type": "string",
+            "default": "Nhập họ tên"
+        },
+        "email_label": {
+            "type": "string",
+            "default": "Email"
+        },
+        "email_placeholder": {
+            "type": "string",
+            "default": "Nhập email"
+        },
+        "phone_label": {
+            "type": "string",
+            "default": "Số điện thoại"
+        },
+        "phone_placeholder": {
+            "type": "string",
+            "default": "Nhập số điện thoại"
+        },
+        "reason_label": {
+            "type": "string",
+            "default": "Lý do tham gia?"
+        },
+        "reason_placeholder": {
+            "type": "string",
+            "default": "Chia sẻ ngắn gọn..."
+        },
+        "submit_button": {
+            "type": "string",
+            "default": "Đăng Ký Ngay"
+        },
+        "loading_text": {
+            "type": "string",
+            "default": "Đang gửi..."
+        },
+        "success_message": {
+            "type": "text",
+            "default": "Đăng ký thành công! Chúng tôi sẽ liên hệ với bạn sớm."
+        },
+        "error_message": {
+            "type": "text",
+            "default": "Có lỗi xảy ra. Vui lòng thử lại sau."
+        }
+    }
+}

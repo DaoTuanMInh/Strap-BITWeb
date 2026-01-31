@@ -1,0 +1,50 @@
+/* Style for Event Section (PvEventSection.vue) */
+.activity-image-wrapper {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+}
+
+.hover-scale {
+    transition: transform 0.6s ease;
+}
+
+.activity-image-wrapper:hover .hover-scale {
+    transform: scale(1.05);
+}
+
+.border-left-theme {
+    border-left: 5px solid #0088cc;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 80%, rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+}
+
+/* Typography Enhancements */
+.font-primary {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+h2,
+h3,
+h5,
+.lead,
+.text-dark {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Make event description bold */
+.lead {
+    font-weight: normal !important;
+    font-family: 'Roboto', 'Arial', sans-serif !important;
+}

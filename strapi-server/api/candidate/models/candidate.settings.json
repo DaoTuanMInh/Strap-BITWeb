@@ -1,0 +1,40 @@
+{
+    "kind": "collectionType",
+    "collectionName": "candidates",
+    "info": {
+        "name": "Candidate",
+        "description": "Candidates registering via website form"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "fullname": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "email",
+            "required": true
+        },
+        "phone": {
+            "type": "string",
+            "required": true
+        },
+        "reason": {
+            "type": "text"
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": [
+                "pending",
+                "contacted",
+                "approved",
+                "rejected"
+            ],
+            "default": "pending"
+        }
+    }
+}

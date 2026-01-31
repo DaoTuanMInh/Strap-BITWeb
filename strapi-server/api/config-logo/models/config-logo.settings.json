@@ -1,0 +1,82 @@
+{
+    "kind": "singleType",
+    "collectionName": "config_logos",
+    "info": {
+        "name": "Config_Logo",
+        "description": "Configuration for website logos, footer description, and SEO settings"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "header_logo_1": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "header_logo_2": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "header_logo_alt": {
+            "type": "string",
+            "default": "Header Logo"
+        },
+        "footer_logo_1": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "footer_logo_2": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "footer_logo_alt": {
+            "type": "string",
+            "default": "Footer Logo"
+        },
+        "footer_description": {
+            "type": "text",
+            "default": "Câu lạc bộ Công nghệ thông tin BIT - Nơi kết nối đam mê và sáng tạo, mang công nghệ đến gần hơn với cộng đồng sinh viên."
+        },
+        "site_favicon": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "site_title": {
+            "type": "string",
+            "default": "BIT Club - Câu lạc bộ CNTT năng động"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "kind": "collectionType",
+    "collectionName": "home_banners",
+    "info": {
+        "name": "Home_Banner",
+        "description": "Banners/Sliders for the home page intro section"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "image": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": true,
+            "pluginOptions": {}
+        },
+        "alt_text": {
+            "type": "string",
+            "default": "Slider Image"
+        },
+        "sort_order": {
+            "type": "integer",
+            "default": 0
+        }
+    }
+}

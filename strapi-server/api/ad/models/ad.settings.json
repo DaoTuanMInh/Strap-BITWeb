@@ -1,0 +1,40 @@
+{
+    "kind": "collectionType",
+    "collectionName": "ads",
+    "info": {
+        "name": "ADS",
+        "description": "Quảng cáo / Slide Events"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "sort_order": {
+            "type": "integer"
+        },
+        "image": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        }
+    }
+}

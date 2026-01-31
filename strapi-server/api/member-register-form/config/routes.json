@@ -1,0 +1,21 @@
+{
+    "routes": [
+        {
+            "method": "GET",
+            "path": "/member-register-form",
+            "handler": "member-register-form.find",
+            "config": {
+                "policies": [],
+                "auth": false
+            }
+        },
+        {
+            "method": "PUT",
+            "path": "/member-register-form",
+            "handler": "member-register-form.update",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

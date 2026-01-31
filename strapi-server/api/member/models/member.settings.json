@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "members",
+  "info": {
+    "name": "member",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "types-of-classes.types-of-classes"
+    }
+  }
+}

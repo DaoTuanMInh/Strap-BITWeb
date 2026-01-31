@@ -1,7 +1,7 @@
 export default {
     head: {
-        titleTemplate: 'Porto - Multi-purpose Ecomerce template with Vue.js',
-        title: 'Porto - Multi-purpose Ecomerce template with Vue.js',
+        titleTemplate: 'BIT CLUB - BTEC Information Technology Club',
+        title: 'BIT CLUB - BTEC Information Technology Club',
         meta: [
             { charset: 'utf-8' },
             {
@@ -12,15 +12,15 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content:
-                    'Porto - Multi-purpose eCommerce Vue Template'
+                    'BIT CLUB - The official Information Technology Club of BTEC FPT Danang.'
             },
             {
                 name: 'author',
-                content: 'd-themes'
+                content: 'BIT CLUB'
             },
             {
                 name: 'keywords',
-                content: 'Porto Vue eCommerce Template'
+                content: 'BIT CLUB, BTEC FPT, IT Club, Danang'
             },
             {
                 name: 'app-mobile-web-app-title',
@@ -28,7 +28,7 @@ export default {
             },
             {
                 name: 'application-name',
-                content: 'Porto Vue eCommerce Template',
+                content: 'BIT CLUB Website',
             },
             {
                 name: 'msapplication-TileColor',
@@ -45,29 +45,33 @@ export default {
                 href: "//fonts.googleapis.com"
             },
             {
+                rel: 'manifest',
+                href: '/manifest.json'
+            },
+            {
+                hid: 'icon-32',
                 rel: 'icon',
-                type: 'image/png',
+                type: 'image/jpeg',
                 sizes: '32x32',
-                href:
-                    './images/icons/favicon-32x32.png'
+                href: '/images/home/banners/logobit.jpg?v=5'
             },
             {
+                hid: 'icon-16',
                 rel: 'icon',
-                type: 'image/png',
+                type: 'image/jpeg',
                 sizes: '16x16',
-                href:
-                    './images/icons/favicon.ico'
+                href: '/images/home/banners/logobit.jpg?v=5'
             },
             {
+                hid: 'shortcut-icon',
                 rel: 'shortcut icon',
-                href:
-                    './images/icons/favicon.ico'
+                href: '/images/home/banners/logobit.jpg?v=5'
             },
             {
+                hid: 'apple-touch-icon',
                 rel: 'apple-touch-icon',
                 sizes: '180x180',
-                href:
-                    './images/icons/apple-touch-icon.png'
+                href: '/images/home/banners/logobit.jpg?v=5'
             },
             {
                 rel: 'mask-icon',
@@ -94,12 +98,12 @@ export default {
     ],
 
     plugins: [
+        { src: '~/plugins/axios-dynamic.js', ssr: false },
         { src: '~/plugins', ssr: false },
-        { src: '~/plugins/localstorage.js', ssr: false },
-        { src: '~/plugins/filters.js', ssr: false },
+
         { src: '~/plugins/directives/animate.js', ssr: false },
-        { src: '~/plugins/directives/parallax.js', ssr: false },
-        { src: '~/plugins/directives/sticky.js', ssr: false }
+        { src: '~/plugins/directives/sticky.js', ssr: false },
+        { src: '~/plugins/directives/scroll-to.js', ssr: false }
     ],
 
     buildModules: [
@@ -108,6 +112,11 @@ export default {
     ],
 
     modules: ['@nuxtjs/axios'],
+
+    axios: {
+        baseURL: 'http://localhost:1337'
+    },
+
 
     router: {
         base: '/',
@@ -131,6 +140,6 @@ export default {
 
     server: {
         port: 4000,
-        host: 'localhost'
+        host: '0.0.0.0'
     }
 };

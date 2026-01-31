@@ -1,0 +1,28 @@
+{
+    "collectionName": "components_intro_core_values",
+    "info": {
+        "name": "core_value",
+        "icon": "star",
+        "description": "Core Value Item"
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "string",
+            "required": true
+        },
+        "color": {
+            "type": "enumeration",
+            "enum": [
+                "primary",
+                "info",
+                "success",
+                "warning",
+                "danger",
+                "dark",
+                "secondary"
+            ],
+            "default": "primary"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_footer_social_links",
+    "info": {
+        "name": "social_link",
+        "icon": "share-alt",
+        "description": "Social media link"
+    },
+    "options": {},
+    "attributes": {
+        "platform": {
+            "type": "string",
+            "required": true
+        },
+        "url": {
+            "type": "string",
+            "required": true
+        },
+        "icon": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

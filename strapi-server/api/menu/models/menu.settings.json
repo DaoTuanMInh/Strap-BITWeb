@@ -1,0 +1,37 @@
+{
+    "kind": "collectionType",
+    "collectionName": "menus",
+    "info": {
+        "name": "Menu",
+        "description": "Main navigation menu items"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "label": {
+            "type": "string",
+            "required": true
+        },
+        "url": {
+            "type": "string",
+            "required": true
+        },
+        "type": {
+            "type": "enumeration",
+            "enum": [
+                "link",
+                "scroll"
+            ],
+            "default": "link",
+            "required": true
+        },
+        "sort_order": {
+            "type": "integer",
+            "default": 0
+        }
+    }
+}

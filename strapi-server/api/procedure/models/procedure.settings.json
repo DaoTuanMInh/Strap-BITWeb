@@ -1,0 +1,24 @@
+{
+    "kind": "singleType",
+    "collectionName": "procedure",
+    "info": {
+        "name": "Procedure",
+        "description": "Recruitment procedure/process"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "section_title": {
+            "type": "string",
+            "default": "Quy Trình Tuyển Thành Viên"
+        },
+        "process": {
+            "type": "component",
+            "repeatable": true,
+            "component": "recruitment.process"
+        }
+    }
+}

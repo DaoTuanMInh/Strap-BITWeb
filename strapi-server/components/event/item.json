@@ -1,0 +1,35 @@
+{
+    "collectionName": "components_event_items",
+    "info": {
+        "name": "item",
+        "icon": "calendar-alt",
+        "description": "Event Item Component"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "image": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "highlights": {
+            "type": "text",
+            "description": "Mỗi dòng một điểm nổi bật"
+        }
+    }
+}

@@ -113,6 +113,10 @@ export const baseSlider9 = {
 export const introSlider = {
     slidesPerView: 1,
     spaceBetween: 0,
+    autoplay: {
+        delay: 8000,
+        disableOnInteraction: false
+    },
     pagination: {
         el: '.swiper-dots',
         clickable: true

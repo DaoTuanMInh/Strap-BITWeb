@@ -1,0 +1,91 @@
+/* PvRecruitmentData.vue (Page) */
+.recruitment-page {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Feature Box */
+.feature-box-effect {
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.feature-box-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+    border-color: transparent;
+}
+
+.icon-wrapper {
+    font-size: 1.8rem;
+}
+
+/* Process Steps */
+.step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #0088cc;
+}
+
+.process-step {
+    position: relative;
+}
+
+.process-step::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: calc(50% + 35px);
+    width: calc(100% - 70px);
+    height: 2px;
+    background: #e0e0e0;
+    z-index: 0;
+}
+
+.process-step:last-child::after {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .process-step::after {
+        display: none;
+    }
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, #0088cc 0%, #2f2a7a 100%);
+}
+
+.pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+}
+
+.text-small,
+.text-body,
+.text-muted,
+li {
+    font-size: 1.6rem !important;
+    line-height: 1.6;
+}
+
+.shadow-hover {
+    transition: box-shadow 0.3s;
+}
+
+.z-index-1 {
+    z-index: 1;
+}

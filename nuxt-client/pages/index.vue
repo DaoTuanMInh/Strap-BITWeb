@@ -2,30 +2,20 @@
 	<main class="main home-page">
 		<pv-intro-section></pv-intro-section>
 
-		<pv-service-section></pv-service-section>
+		<pv-core-values></pv-core-values>
+		
+		<pv-blog-section :posts="posts"></pv-blog-section>
 
-		<pv-featured-collection :products="featuredProducts"></pv-featured-collection>
+		<pv-intro-info></pv-intro-info>
+<div class="container">
+	<pv-event-section></pv-event-section>
+</div>
+<pv-member-slider></pv-member-slider>
+<pv-classroom-list></pv-classroom-list>
 
-		<pv-new-collection :products="newProducts"></pv-new-collection>
+        <pv-faq-section></pv-faq-section>
 
-		<pv-category-section></pv-category-section>
 
-		<div class="container">
-			<pv-small-collection
-				:featured-products="featuredProducts.slice(0,3)"
-				:best-products="bestProducts.slice(0,3)"
-				:latest-products="newProducts.slice(0,3)"
-				:top-rated-products="topRatedProducts.slice(0,3)"
-			></pv-small-collection>
-
-			<hr class="mt-4 m-b-5">
-
-			<pv-blog-section :posts="posts"></pv-blog-section>
-
-			<hr class="mt-4 mb-0">
-
-			<pv-brand-section></pv-brand-section>
-		</div>
 
 		<light-box
 			v-if="lightBoxMedia.length > 0"
@@ -39,20 +29,15 @@
 
 <script>
 import LightBox from 'vue-image-lightbox';
-import PvIntroSection from '~/components/partials/home/PvIntroSection';
-import PvServiceSection from '~/components/partials/home/PvServiceSection';
-import PvCategorySection from '~/components/partials/home/PvCategorySection';
-import PvNewCollection from '~/components/partials/home/PvNewCollection';
-import PvSmallCollection from '~/components/partials/product/PvSmallCollection';
-import PvBlogSection from '~/components/partials/home/PvBlogSection';
-import PvBrandSection from '~/components/partials/home/PvBrandSection';
-import PvFeaturedCollection from '~/components/partials/home/PvFeaturedCollection';
+import PvIntroSection from '~/components/home/PvIntroSection';
+import PvCoreValues from '~/components/home/PvCoreValues';
+import PvMemberSlider from '~/components/home/PvMemberSlider';
+import PvClassroomList from '~/components/home/PvClassroomList';
+import PvEventSection from '~/components/home/PvEventSection';
+import PvBlogSection from '~/components/home/PvBlogSection';
+import PvFaqSection from '~/components/home/PvFaqSection';
+import PvIntroInfo from '~/components/home/PvIntroInfo';
 
-import {
-	getProductsByAttri,
-	getTopSellingProducts,
-	getTopRatedProducts
-} from '~/utils/service';
 import { getCookie } from '~/utils';
 import Api, { baseUrl } from '~/api';
 
@@ -60,22 +45,18 @@ export default {
 	components: {
 		LightBox,
 		PvIntroSection,
-		PvServiceSection,
-		PvCategorySection,
-		PvNewCollection,
-		PvSmallCollection,
+		PvCoreValues,
+		PvMemberSlider,
+		PvClassroomList,
+		PvEventSection,
 		PvBlogSection,
-		PvBrandSection,
-		PvFeaturedCollection
+		PvIntroInfo,
+        PvFaqSection
 	},
 	data: function () {
 		return {
 			products: [],
 			posts: [],
-			featuredProducts: [],
-			newProducts: [],
-			bestProducts: [],
-			topRatedProducts: [],
 			timerId: 0
 		};
 	},
@@ -101,38 +82,21 @@ export default {
 			.then( response => {
 				this.products = response.data.products;
 				this.posts = response.data.posts;
-				this.featuredProducts = getProductsByAttri(
-					response.data.products
-				);
-				this.newProducts = getProductsByAttri(
-					response.data.products,
-					'is_new'
-				);
-				this.bestProducts = getTopSellingProducts(
-					response.data.products
-				);
-				this.topRatedProducts = getTopRatedProducts(
-					response.data.products
-				);
 			} )
 			.catch( error => ( { error: JSON.stringify( error ) } ) );
-
-		this.timerId = setTimeout( () => {
-			if (
-				this.$route.path === '/' &&
-				getCookie( 'newsletter' ) !== 'false'
-			) {
-				this.$modal.show(
-					() =>
-						import( '~/components/features/modal/PvNewsletterModal' ),
-					{},
-					{ width: '740', height: 'auto', adaptive: true, class: 'newsletter-modal' }
-				);
-			}
-		}, 10000 );
 	},
 	destroyed: function () {
-		clearTimeout( this.timerId );
 	}
 };
 </script>
+
+<style>
+body {
+    background-color: #f9f9f9;
+    background-image: radial-gradient(#e6e6e6 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+</style>
+
+
+

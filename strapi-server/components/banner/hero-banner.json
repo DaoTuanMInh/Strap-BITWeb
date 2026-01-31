@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_banner_hero_banners",
+    "info": {
+        "name": "hero-banner",
+        "icon": "image"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "background_image": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_recruitment_departments",
+    "info": {
+        "name": "department",
+        "icon": "users"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "skills": {
+            "type": "richtext"
+        }
+    }
+}

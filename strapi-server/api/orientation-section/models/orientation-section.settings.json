@@ -1,0 +1,28 @@
+{
+    "kind": "singleType",
+    "collectionName": "orientation_sections",
+    "info": {
+        "name": "OrientationSection",
+        "description": "Cấu hình phần Định hướng phát triển"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Định hướng phát triển sắp tới"
+        },
+        "content": {
+            "type": "text"
+        },
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "orientation.item"
+        }
+    }
+}

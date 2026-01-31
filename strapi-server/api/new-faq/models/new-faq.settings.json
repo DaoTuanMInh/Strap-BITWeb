@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "new_faqs",
+  "info": {
+    "name": "new-faq",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.content",
+      "required": true
+    }
+  }
+}

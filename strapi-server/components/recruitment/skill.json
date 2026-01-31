@@ -1,0 +1,13 @@
+{
+    "collectionName": "components_recruitment_skills",
+    "info": {
+        "name": "skill",
+        "icon": "code-branch"
+    },
+    "options": {},
+    "attributes": {
+        "name": {
+            "type": "string"
+        }
+    }
+}

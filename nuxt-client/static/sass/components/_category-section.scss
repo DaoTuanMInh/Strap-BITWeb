@@ -1,0 +1,69 @@
+/* PvCategorySection.vue */
+.member-section {
+    background-color: #fcfcfc;
+    background-image: radial-gradient(#dee2e6 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Tech dot pattern */
+}
+
+/* Background Decorations Removed */
+
+.member-overlay-card {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.member-overlay-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.hover-zoom {
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.member-overlay-card:hover .hover-zoom {
+    transform: scale(1.15);
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Neutral black gradient for readability */
+    background: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.member-overlay-card:hover .member-overlay {
+    background: none;
+}
+
+.overlay-line {
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.member-overlay-card:hover .overlay-line {
+    width: 50px;
+}
+
+/* Typography tweaks */
+.text-5 {
+    font-size: 1.4rem;
+}
+
+.ls-md {
+    letter-spacing: 0.05em;
+}

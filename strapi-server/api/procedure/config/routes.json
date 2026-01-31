@@ -1,0 +1,20 @@
+{
+    "routes": [
+        {
+            "method": "GET",
+            "path": "/procedure",
+            "handler": "procedure.find",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "PUT",
+            "path": "/procedure",
+            "handler": "procedure.update",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

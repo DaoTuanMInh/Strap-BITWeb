@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_intro_feature_items",
+    "info": {
+        "name": "feature-item",
+        "icon": "bullseye",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "color": {
+            "type": "string"
+        }
+    }
+}

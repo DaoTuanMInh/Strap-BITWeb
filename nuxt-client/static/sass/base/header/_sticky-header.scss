@@ -1,29 +1,16 @@
 // Sticky Header
 
-@include set-default(
-	(
-		header: (
-			logo: (
-				sticky: (
-					max-width: 89px,
+@include set-default((header: (logo: (sticky: (max-width: 89px,
 					transform: false,
 					transform-origin: false,
-				)
-			),
-			middle: (
-				sticky: (
-					padding-top: false,
+				)),
+			middle: (sticky: (padding-top: false,
 					padding-bottom: false,
-					height: 60px
-				)
-			)
-		)
-	)
-);
+					height: 60px)))));
 
 .sticky-header {
-	transition:  left .25s;
-	
+	transition: left .25s;
+
 	&.fixed {
 		display: flex;
 		position: fixed;
@@ -33,29 +20,30 @@
 		width: 100%;
 		padding: 0;
 		background: #fff;
-		box-shadow: 0 1px 0 0 rgba(0,0,0,0.06);
+		box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
 		z-index: 1040;
 		animation-name: fixedHeader;
 		animation-duration: .4s;
 
 		.logo {
-			@include css( max-width, header, logo, sticky, max-width );
+			@include css(max-width, header, logo, sticky, max-width);
 
 			img {
-				@include css( transform, header, logo, sticky, transform );
-				@include css( transform-origin, header, logo, sticky, transform-origin );
+				@include css(transform, header, logo, sticky, transform);
+				@include css(transform-origin, header, logo, sticky, transform-origin);
 			}
 		}
 	}
 
 	&.header-middle.fixed {
-		@include css( height, header, middle, sticky, height );
-		@include css( padding-top, header, middle, sticky, padding-top );
-		@include css( padding-bottom, header, middle, sticky, padding-bottom );
+		@include css(height, header, middle, sticky, height);
+		@include css(padding-top, header, middle, sticky, padding-top);
+		@include css(padding-bottom, header, middle, sticky, padding-bottom);
 	}
 
 	&.deprecated-sticky {
 		&:not(.fixed) {
+
 			.logo,
 			.cart-dropdown {
 				display: none;
@@ -68,7 +56,7 @@
 	}
 
 	.main &:not(.fixed) {
-		> .container {
+		>.container {
 			padding-left: 0;
 			padding-right: 0;
 		}
@@ -97,8 +85,8 @@
 		// 	margin-right: 3rem;
 		// }
 	}
-	.sidebar-opened &.fixed:not(.sticky-header),
-	.mmenu-active &.fixed  {
+
+	.sidebar-opened &.fixed:not(.sticky-header) {
 		left: 260px;
 		transition: left .25s;
 	}
@@ -116,7 +104,7 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: all .25s;
-    z-index: 997;
+	z-index: 997;
 
 	&.fixed {
 		opacity: 1;
@@ -172,6 +160,7 @@
 
 @include mq(lg, max) {
 	.sticky-header {
+
 		.sidebar-opened &.fixed {
 			left: 260px;
 			transition: left .25s;

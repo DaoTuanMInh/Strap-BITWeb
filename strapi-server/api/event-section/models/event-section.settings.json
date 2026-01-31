@@ -1,0 +1,25 @@
+{
+    "kind": "singleType",
+    "collectionName": "event_sections",
+    "info": {
+        "name": "EventSection",
+        "description": "Cấu hình phần Sự kiện"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Các sự kiện & hoạt động"
+        },
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "event.item"
+        }
+    }
+}

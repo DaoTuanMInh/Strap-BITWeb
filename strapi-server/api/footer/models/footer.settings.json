@@ -1,0 +1,71 @@
+{
+    "kind": "singleType",
+    "collectionName": "footer",
+    "info": {
+        "name": "Footer",
+        "description": "Footer information including quick links and contact details"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "quick_links_title": {
+            "type": "string",
+            "default": "Liên kết nhanh"
+        },
+        "quick_links": {
+            "type": "component",
+            "repeatable": true,
+            "component": "footer.link"
+        },
+        "activities_title": {
+            "type": "string",
+            "default": "Hoạt động chính"
+        },
+        "activities_links": {
+            "type": "component",
+            "repeatable": true,
+            "component": "footer.link"
+        },
+        "contact_title": {
+            "type": "string",
+            "default": "Thông Tin Liên Hệ"
+        },
+        "address_label": {
+            "type": "string",
+            "default": "Địa chỉ"
+        },
+        "address": {
+            "type": "text",
+            "default": "Tòa D, Cao Đẳng Anh Quốc BTEC, 13 Trịnh Văn Bộ, P. Canh, Nam Từ Liêm, Hà Nội"
+        },
+        "email_label": {
+            "type": "string",
+            "default": "Email"
+        },
+        "email": {
+            "type": "email",
+            "default": "bit.btecfpt@gmail.com"
+        },
+        "working_hours_label": {
+            "type": "string",
+            "default": "Giờ làm việc"
+        },
+        "working_hours": {
+            "type": "component",
+            "repeatable": true,
+            "component": "footer.working-hour"
+        },
+        "social_title": {
+            "type": "string",
+            "default": "Kết nối với chúng tôi"
+        },
+        "social_links": {
+            "type": "component",
+            "repeatable": true,
+            "component": "footer.social-link"
+        }
+    }
+}

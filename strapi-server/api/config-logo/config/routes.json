@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "method": "GET",
+            "path": "/config-logo",
+            "handler": "config-logo.find",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "PUT",
+            "path": "/config-logo",
+            "handler": "config-logo.update",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "DELETE",
+            "path": "/config-logo",
+            "handler": "config-logo.delete",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

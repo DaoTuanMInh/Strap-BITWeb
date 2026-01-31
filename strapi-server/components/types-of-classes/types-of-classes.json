@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_types_of_classes_types_of_classes",
+  "info": {
+    "name": "Types_Of_Classes",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "note": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

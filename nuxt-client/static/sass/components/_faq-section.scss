@@ -1,0 +1,74 @@
+/* PvFaqSection.vue */
+.faq-item {
+    background: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.faq-item.active {
+    border-color: #0088cc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    transition: background 0.3s;
+}
+
+.faq-item.active .faq-question {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.faq-question:hover {
+    background: #f0f0f0;
+}
+
+.faq-question h5 {
+    margin: 0;
+    font-size: 1.4rem;
+    /* Increased from 1.1rem */
+    font-weight: 600;
+    color: #333;
+    padding-right: 1rem;
+}
+
+.faq-question i {
+    color: #0088cc;
+    transition: transform 0.3s;
+    font-size: 1.2rem;
+    /* Slightly larger icon */
+}
+
+.faq-answer {
+    padding: 1.5rem;
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    /* Increased from default */
+}
+
+/* Slide transition */
+.slide-enter-active,
+.slide-leave-active {
+    transition: all 0.3s ease;
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}

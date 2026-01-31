@@ -1,0 +1,45 @@
+{
+    "kind": "collectionType",
+    "collectionName": "home_features",
+    "info": {
+        "name": "Home_Feature",
+        "description": "Featured info boxes on homepage (Service Section)"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "icon": {
+            "type": "string",
+            "default": "fas fa-rocket"
+        },
+        "url": {
+            "type": "string"
+        },
+        "type": {
+            "type": "enumeration",
+            "enum": [
+                "link",
+                "scroll"
+            ],
+            "default": "scroll"
+        },
+        "sort_order": {
+            "type": "integer",
+            "default": 0
+        }
+    }
+}

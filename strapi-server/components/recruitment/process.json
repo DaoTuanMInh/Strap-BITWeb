@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_recruitment_processes",
+    "info": {
+        "name": "process",
+        "icon": "list-ol"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text"
+        }
+    }
+}

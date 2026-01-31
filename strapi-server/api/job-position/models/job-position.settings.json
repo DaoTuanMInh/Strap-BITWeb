@@ -1,0 +1,28 @@
+{
+    "kind": "singleType",
+    "collectionName": "job_position",
+    "info": {
+        "name": "Job Position",
+        "description": "Job positions/departments for recruitment"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "section_title": {
+            "type": "string",
+            "default": "Vị Trí Ứng Tuyển"
+        },
+        "section_description": {
+            "type": "text",
+            "default": "Chúng tôi đang tìm kiếm những mảnh ghép tài năng cho các ban chuyên môn."
+        },
+        "departments": {
+            "type": "component",
+            "repeatable": true,
+            "component": "recruitment.department"
+        }
+    }
+}

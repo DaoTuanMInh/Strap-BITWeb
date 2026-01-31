@@ -1,137 +1,94 @@
 <template>
-	<footer class="footer bg-dark">
+	<footer class="footer" id="footer">
 		<div class="footer-middle">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 col-xl-2 col-lg-2 d-flex align-items-center">
-						<nuxt-link to="/">
+					<div class="col-lg-4 col-md-6 mb-4 mb-lg-0 mt-3 hidden-sm">
+						<nuxt-link to="/" v-scroll-to="'body'" class="d-flex align-items-center mb-3 footer-offset-left">
 							<img
-								src="~/static/images/home/footer-logo.png"
-								alt="Logo"
-								class="logo-footer"
+                                v-if="logoMain"
+								:src="logoMain"
+								:alt="logoAlt"
+								class="logo-footer m-0"
+								style="max-height: 80px;"
+							>
+                            
+							<img
+                                v-if="logoSecondary"
+								:src="logoSecondary"
+								:alt="logoAlt"
+								class="logo-footer m-0 ml-3"
+								style="max-height: 80px;"
 							>
 						</nuxt-link>
+						<p class="footer-desc footer-offset-left">
+							{{ footerDescription }}
+						</p>
 					</div>
 
-					<div class="col-md-12 col-xl-3 col-lg-3">
+					<div class="col-lg-2 col-md-6 mb-4 mb-lg-0 hidden-sm">
 						<div class="widget">
-							<h4 class="widget-title">GET IN TOUCH</h4>
-							<ul class="contact-info">
-								<li>
-									<span class="contact-info-label">Address</span>123 Street Name, City, England
-								</li>
-								<li>
-									<span class="contact-info-label">Phone</span><a href="tel:">Toll Free (123)
-										456-7890</a>
-								</li>
-								<li>
-									<span class="contact-info-label">Email</span> <a href="mailto:mail@example.com">mail@example.com</a>
-								</li>
-								<li>
-									<span class="contact-info-label">Working Days/Hours</span>
-									Mon - Sun / 9:00AM - 8:00PM
-								</li>
-							</ul>
-
-							<div class="social-icons">
-								<a
-									href="javascript:;"
-									class="social-icon social-instagram icon-instagram"
-									title="Instagram"
-								></a>
-								<a
-									href="javascript:;"
-									class="social-icon social-twitter icon-twitter"
-									title="Twitter"
-								></a>
-								<a
-									href="javascript:;"
-									class="social-icon social-facebook icon-facebook"
-									title="Facebook"
-								></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-xl-3 col-lg-3 col-12">
-						<div class="widget">
-							<h4 class="widget-title">Customer Services</h4>
-
+							<h4 class="widget-title">{{ quickLinksTitle }}</h4>
 							<ul class="links">
-								<li><a href="javascript:;">Help & FAQs</a></li>
-								<li><a href="javascript:;">Order Tracking</a></li>
-								<li><a href="javascript:;">Shipping & Delivery</a></li>
-								<li><a href="javascript:;">Orders History</a></li>
-								<li><a href="javascript:;">Advanced Search</a></li>
-								<li>
-									<nuxt-link to="/pages/login">Login</nuxt-link>
+								<li v-for="(link, index) in quickLinks" :key="index">
+									<nuxt-link :to="link.url">{{ link.text }}</nuxt-link>
 								</li>
-								<li><a href="javascript:;">Careers</a></li>
-								<li>
-									<nuxt-link to="/pages/about-us">About Us</nuxt-link>
-								</li>
-								<li><a href="javascript:;">Corporate Sales</a></li>
-								<li><a href="javascript:;">Careers</a></li>
 							</ul>
 						</div>
 					</div>
 
-					<div class="col-md-6 col-xl-4 col-lg-4 col-12">
-						<div class="widget widget-newsletter">
-							<h4 class="widget-title ls-n-10">Subscribe newsletter</h4>
-							<p>Get all the latest information on events,<br /> sales and offers. Sign up for
-								newsletter:
-							</p>
-							<form
-								action="#"
-								class="mb-0"
-							>
-								<input
-									type="email"
-									class="form-control m-b-3"
-									placeholder="Email address"
-									required
-								>
-
-								<input
-									type="submit"
-									class="btn btn-outline-primary shadow-none"
-									value="Subscribe"
-								>
-							</form>
+					<div class="col-lg-3 col-md-6 mb-4 mb-lg-0 hidden-sm">
+						<div class="widget">
+							<h4 class="widget-title">{{ activitiesTitle }}</h4>
+							<ul class="links">
+								<li v-for="(link, index) in activitiesLinks" :key="index">
+									<nuxt-link :to="link.url">{{ link.text }}</nuxt-link>
+								</li>
+							</ul>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="container">
-			<div class="footer-bottom">
-				<div class="container d-sm-flex align-items-center">
-					<div class="footer-left">
-						<span class="footer-copyright">Porto Medical. © <span class="d-inline-block">2021.</span>
-							All Rights Reserved
-						</span>
-					</div>
+					<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+						<div class="widget">
+						<h4 class="widget-title">{{ contactTitle }}</h4>
+							<ul class="contact-info">
+								<li class="contact-item d-flex align-items-center mb-2">
+									<div class="contact-icon d-flex align-items-center justify-content-center rounded-circle bg-white text-dark mr-3" style="width: 40px; height: 40px; min-width: 40px;">
+										<i class="fas fa-map-marker-alt"></i>
+									</div>
+									<div class="contact-text">
+									<h5 class="mb-1 text-white font-weight-bold" style="font-size: 14px;">{{ addressLabel }}</h5>
+									<span class="d-block text-white-50" style="font-size: 13px; line-height: 1.4;">{{ address }}</span>
+									</div>
+								</li>
+								<li class="contact-item d-flex align-items-center mb-2">
+									<div class="contact-icon d-flex align-items-center justify-content-center rounded-circle bg-white text-dark mr-3" style="width: 40px; height: 40px; min-width: 40px;">
+										<i class="fas fa-envelope"></i>
+									</div>
+									<div class="contact-text">
+									<h5 class="mb-1 text-white font-weight-bold" style="font-size: 14px;">{{ emailLabel }}</h5>
+									<a :href="'mailto:' + email" class="d-block text-white-50" style="font-size: 13px;">{{ email }}</a>
+									</div>
+								</li>
+								<li class="contact-item d-flex align-items-center mb-2">
+									<div class="contact-icon d-flex align-items-center justify-content-center rounded-circle bg-white text-dark mr-3" style="width: 40px; height: 40px; min-width: 40px;">
+										<i class="fas fa-clock"></i>
+									</div>
+									<div class="contact-text">
+									<h5 class="mb-1 text-white font-weight-bold" style="font-size: 14px;">{{ workingHoursLabel }}</h5>
+									<span class="d-block text-white-50" style="font-size: 13px; line-height: 1.4;">
+										<span v-for="(item, index) in workingHours" :key="index">
+											{{ item.day }}: {{ item.hours }}<br v-if="index < workingHours.length - 1">
+										</span>
+									</span>
+									</div>
+								</li>
+							</ul>
 
-					<div class="footer-right ml-auto mt-1 mt-sm-0">
-						<div class="payment-icons">
-							<span
-								class="payment-icon visa"
-								:style="{'background-image': 'url(./images/payments/payment-visa.svg)'}"
-							></span>
-							<span
-								class="payment-icon paypal"
-								:style="{'background-image': 'url(./images/payments/payment-paypal.svg)'}"
-							></span>
-							<span
-								class="payment-icon stripe"
-								:style="{'background-image': 'url(./images/payments/payment-stripe.png)'}"
-							></span>
-							<span
-								class="payment-icon verisign"
-								:style="{'background-image':  'url(./images/payments/payment-verisign.svg)'}"
-							></span>
+							<h4 class="widget-title mt-2 mb-2" style="font-size: 14px;">{{ socialTitle }}</h4>
+						<div class="social-icons">
+							<a v-for="(social, index) in socialLinks" :key="index" :href="social.url" class="social-icon" :title="social.platform"><i :class="social.icon"></i></a>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -139,3 +96,75 @@
 		</div>
 	</footer>
 </template>
+
+<script>
+import { mapState } from 'vuex';
+import { baseUrl } from '~/api';
+
+export default {
+    computed: {
+        ...mapState(['configLogo', 'footer']),
+        logoMain() {
+            if (this.configLogo && this.configLogo.footer_logo_1) {
+                const url = this.configLogo.footer_logo_1.url;
+                return url.startsWith('http') ? url : `${baseUrl}${url}`;
+            }
+            return null;
+        },
+        logoSecondary() {
+            if (this.configLogo && this.configLogo.footer_logo_2) {
+                const url = this.configLogo.footer_logo_2.url;
+                return url.startsWith('http') ? url : `${baseUrl}${url}`;
+            }
+            return null;
+        },
+        logoAlt() {
+            return (this.configLogo && this.configLogo.footer_logo_alt) || '';
+        },
+        footerDescription() {
+            return (this.configLogo && this.configLogo.footer_description) || '';
+        },
+        // Footer dynamic data
+        quickLinksTitle() {
+            return this.footer?.quick_links_title || '';
+        },
+        quickLinks() {
+            return this.footer?.quick_links || [];
+        },
+        activitiesTitle() {
+            return this.footer?.activities_title || '';
+        },
+        activitiesLinks() {
+            return this.footer?.activities_links || [];
+        },
+        contactTitle() {
+            return this.footer?.contact_title || '';
+        },
+        addressLabel() {
+            return this.footer?.address_label || '';
+        },
+        address() {
+            return this.footer?.address || '';
+        },
+        emailLabel() {
+            return this.footer?.email_label || '';
+        },
+        email() {
+            return this.footer?.email || '';
+        },
+        workingHoursLabel() {
+            return this.footer?.working_hours_label || '';
+        },
+        workingHours() {
+            return this.footer?.working_hours || [];
+        },
+        socialTitle() {
+            return this.footer?.social_title || '';
+        },
+        socialLinks() {
+            return this.footer?.social_links || [];
+        }
+    }
+};
+</script>
+

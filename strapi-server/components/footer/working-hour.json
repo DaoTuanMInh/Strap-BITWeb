@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_footer_working_hours",
+    "info": {
+        "name": "working_hour",
+        "icon": "clock",
+        "description": "Working hour schedule"
+    },
+    "options": {},
+    "attributes": {
+        "day": {
+            "type": "string",
+            "required": true
+        },
+        "hours": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

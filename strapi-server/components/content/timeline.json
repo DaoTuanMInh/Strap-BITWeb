@@ -1,0 +1,32 @@
+{
+    "collectionName": "components_content_timelines",
+    "info": {
+        "name": "timeline",
+        "icon": "clock"
+    },
+    "options": {},
+    "attributes": {
+        "year": {
+            "type": "string",
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "desc": {
+            "type": "text",
+            "required": true
+        },
+        "image": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": true,
+            "pluginOptions": {}
+        }
+    }
+}

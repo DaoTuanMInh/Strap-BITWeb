@@ -16,18 +16,11 @@
 
 // # Variables
 
-@include set-default(
-	(
-		swiper-carousel: (
-			nav: (
-				image-center: 35%
-			)
-		)
-	)
-);
+@include set-default((swiper-carousel: (nav: (image-center: 35%))));
 
 // 1. swiper Carousel
 .swiper-carousel {
+
 	// 1.1) Customize Plugin
 	// Use This: when dots do not take place in center of circle
 	.swiper-nav .swiper-button-disabled {
@@ -42,11 +35,11 @@
 		margin-left: -3.5px;
 	}
 
-	&.dots-m-0 .disabled + .swiper-pagination-bullets {
+	&.dots-m-0 .disabled+.swiper-pagination-bullets {
 		margin: 0;
 	}
 
-	&.dots-mt-1 .disabled + .swiper-pagination-bullets {
+	&.dots-mt-1 .disabled+.swiper-pagination-bullets {
 		margin-top: 1rem;
 	}
 
@@ -69,21 +62,21 @@
 
 	// 1.3) Nav Image Center Pos
 	&.nav-image-center .swiper-nav button {
-		@include css( top, swiper-carousel, nav, image-center );
+		@include css(top, swiper-carousel, nav, image-center);
 	}
 
 	// 1.4) Show Nav Hover
 	&.show-nav-hover {
-		.swiper-nav > button {
+		.swiper-nav>button {
 			opacity: 0;
 			transition: opacity .2s, color .2s;
 		}
 
-		&:hover .swiper-nav > button {
+		&:hover .swiper-nav>button {
 			opacity: 1;
 
 			&.swiper-button-disabled {
-				opacity: .5	;
+				opacity: .5;
 			}
 		}
 	}
@@ -105,7 +98,7 @@
 			.swiper-prev {
 				left: -1.7vw;
 			}
-	
+
 			.swiper-next {
 				right: -1.7vw;
 			}
@@ -115,10 +108,10 @@
 				.swiper-prev {
 					left: -2.3vw;
 				}
-		
+
 				.swiper-next {
 					right: -2.3vw;
-				}	
+				}
 			}
 		}
 	}
@@ -148,20 +141,20 @@
 		.swiper-pagination-bullet.swiper-pagination-bullet-active span::before {
 			background-color: $primary-color-dark;
 		}
-		
+
 		.swiper-pagination-bullet span {
 			margin: 1px 1px 2px 0px;
 			border: none;
-			
+
 			&::before {
 				opacity: 1;
 				visibility: visible;
-			    transform: scale(1.15);
+				transform: scale(1.15);
 				background-color: #D6D6D6;
 			}
 		}
 	}
-	
+
 	// 1.8) Images Align Center
 	&.images-center img {
 		width: auto;
@@ -186,7 +179,7 @@
 		display: block;
 	}
 
-	&:not(.swiper-loaded) > *:not(:first-child) {
+	&:not(.swiper-loaded)>*:not(:first-child) {
 		display: none;
 	}
 }
@@ -211,24 +204,24 @@ img.slide-bg {
 .swiper-carousel.dot-inside .swiper-pagination-bullets {
 	position: absolute;
 	right: 3.6rem;
-    left: 3.6rem;
+	left: 3.6rem;
 	bottom: 4.1rem;
 	text-align: center;
 }
 
 
 // 2. noUi Slider
-.noUi-target {
-	background: #eee;
-}
+// .noUi-target {
+// 	background: #eee;
+// }
 
-.noUi-handle {
-	background: $primary-color;
-}
+// .noUi-handle {
+// 	background: $primary-color;
+// }
 
-.noUi-connect {
-	background: none;
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.38) inset;
-}
+// .noUi-connect {
+// 	background: none;
+// 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.38) inset;
+// }
 
 // 3. Responsive

@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_orientation_items",
+    "info": {
+        "name": "item",
+        "icon": "list",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "color": {
+            "type": "string"
+        },
+        "sort_order": {
+            "type": "integer"
+        }
+    }
+}

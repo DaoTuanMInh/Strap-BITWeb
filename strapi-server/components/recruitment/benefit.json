@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_recruitment_benefits",
+    "info": {
+        "name": "benefit",
+        "icon": "star"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text"
+        }
+    }
+}

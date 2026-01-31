@@ -1,0 +1,55 @@
+{
+    "kind": "singleType",
+    "collectionName": "intro_sections",
+    "info": {
+        "name": "IntroSection",
+        "description": "Cấu hình phần Giới thiệu chung"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Giới thiệu Câu lạc bộ Công nghệ Thông tin BTEC (BIT)"
+        },
+        "description_1": {
+            "type": "text"
+        },
+        "description_2": {
+            "type": "text"
+        },
+        "image_1": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "image_2": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": [
+                "images"
+            ],
+            "plugin": "upload",
+            "required": false,
+            "pluginOptions": {}
+        },
+        "core_values_title": {
+            "type": "string",
+            "default": "Phương châm hoạt động:"
+        },
+        "core_values": {
+            "type": "component",
+            "repeatable": true,
+            "component": "intro.core_value"
+        }
+    }
+}

@@ -134,49 +134,15 @@ export const mainMenu = {
     "other": [
         {
             "title": "Wishlist",
-            "url": "/pages/wishlist"
+            "url": "/wishlist"
         },
         {
             "title": "Shopping Cart",
-            "url": "/pages/cart"
+            "url": "/cart"
         },
         {
             "title": "Checkout",
-            "url": "/pages/checkout"
+            "url": "/checkout"
         },
-        {
-            "title": "Dashboard",
-            "url": "/pages/account"
-        },
-        // {
-        //     "title": "About Us",
-        //     "url": "/pages/about-us"
-        // },
-        // {
-        //     "title": "blog",
-        //     "url": "/pages/blog",
-        //     "subPages": [
-        //         {
-        //             "title": "Blog",
-        //             "url": "/pages/blog"
-        //         },
-        //         {
-        //             "title": "Blog Post",
-        //             "url": "/pages/single/post-format-image-type"
-        //         }
-        //     ]
-        // },
-        // {
-        //     "title": "Contact Us",
-        //     "url": "/pages/contact-us"
-        // },
-        {
-            "title": "Login",
-            "url": "/pages/login"
-        },
-        {
-            "title": "Forgot Password",
-            "url": "/pages/forgot-password"
-        }
     ]
 }

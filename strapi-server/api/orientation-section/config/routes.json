@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "method": "GET",
+            "path": "/orientation-section",
+            "handler": "orientation-section.find",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "PUT",
+            "path": "/orientation-section",
+            "handler": "orientation-section.update",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "DELETE",
+            "path": "/orientation-section",
+            "handler": "orientation-section.delete",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

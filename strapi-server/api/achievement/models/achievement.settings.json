@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "achievements",
+  "info": {
+    "name": "achievement",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "banner.hero-banner"
+    },
+    "timeline": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.timeline",
+      "required": true
+    },
+    "Banner2": {
+      "type": "component",
+      "repeatable": true,
+      "component": "banner.hero-banner"
+    }
+  }
+}
